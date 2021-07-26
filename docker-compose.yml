@@ -6,10 +6,9 @@ services:
         build: .
         ports:
             - "5000:3000"
-            links: database--test
-
-            database--test:
+            links: database
+            
+            database:
                 container_name: database-test
-                ports:
-                    - "27018:27017"
+                ports: -"27018:27017"
 

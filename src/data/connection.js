@@ -1,5 +1,7 @@
 const moongose = require('mongoose')
 
-moongose.connect('mongo://mongo/database--test')
-.then(db => console.log('Db is connected to', db.Connection.host))
+const URI ='mongodb://localhost/database--test'
+
+moongose.connect(URI)
+.then(db => console.log('Db is connected to', db.Connection.URI))
 .catch(err => console.error(err))
