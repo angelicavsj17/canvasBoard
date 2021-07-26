@@ -1,0 +1,15 @@
+version: "3"
+services:
+    app:
+        container_name: container--app--test
+        restart: always
+        build: .
+        ports:
+            - "5000:3000"
+            links: database--test
+
+            database--test:
+                container_name: database-test
+                ports:
+                    - "27018:27017"
+
