@@ -1,10 +1,10 @@
+require('dotenv').config()
 const app = require('./app')
-const database =require('./data/connection')
+require('./data/connection')
 
-const main  = async() =>{
-  await  app.listen(3000)
-  await console.log('server is running')
+//server
+const main = async() => {
+await app.listen(app.get('port'))
+console.log('servidor de addin corriendo en el puerto:', app.get('port'))
 }
-
 main()
-

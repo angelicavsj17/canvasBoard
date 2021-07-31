@@ -1,0 +1,27 @@
+
+### Getting all taks
+GET http://localhost:4000/api/taks
+
+### Getting taks by id
+GET http://localhost:4000/api/taks/
+
+### Deleting taks by id
+DELETE http://localhost:4000/api/taks/
+
+### Updating taks by id
+PUT http://localhost:4000/api/taks/61046262fddb68025cc20e27
+Content-Type: application/json
+
+{
+   "title": "tarea de prueba 1actualizada",
+    "resumen": "esta es una prueba de tareas actualizada",
+    "idUser": 23 
+}
+
+### Creating taks
+POST http://localhost:4000/api/taks
+Content-Type: application/json
+{
+    "title": "tarea de prueba 24",
+    "resumen": "esta es una prueba de tareas24 ",
+}

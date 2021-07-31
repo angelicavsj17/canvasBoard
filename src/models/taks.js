@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const Tacks = new Schema(
+const taksSchema = new Schema(
 {
 
 title:{
@@ -11,14 +11,13 @@ resumen:{
 Type:String
 },
 
-idUser:{
-type:Number,
-ref: 'id_User',
+idUserTak:{
+type:String,
+ref: 'Users',
 type: Schema.Types.ObjectId
 }
-
 })
 
-module.exports=model(Tacks, lotesSchema )
+module.exports=model("Tacks", taksSchema )
 
   

@@ -1,0 +1,38 @@
+
+### Getting all taks
+GET http://localhost:4000/api/auth
+
+### Getting taks by id
+GET http://localhost:4000/api/users/
+
+### Deleting taks by id
+DELETE http://localhost:4000/api/users/61046262fddb68025cc20e27
+
+### Updating taks by id
+PUT http://localhost:4000/api/users/61046262fddb68025cc20e27
+Content-Type: application/json
+
+{
+   "title": "tarea de prueba 1actualizada",
+    "resumen": "esta es una prueba de tareas actualizada",
+    "idUser": 23 
+}
+
+### Creating user
+POST http://localhost:4000/api/auth/signUp
+Content-Type: application/json
+
+{
+    "userName": "usuario de prueba4",
+    "email": "pruebaDETAREA@gmail.com",
+    "password": "12345678a"
+}
+
+### sigIn
+POST http://localhost:4000/api/auth/signIn
+Content-Type: application/json
+
+{
+    "email": "pruebaDETAREA@gmail.com",
+    "password": "12345678a"
+}
